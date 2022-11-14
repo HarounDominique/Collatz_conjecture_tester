@@ -1,7 +1,9 @@
+package Analyzer;
+import PhysicalPersistence.Persistence;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Tester {
+public class CollatzAnalyzer {
 
     //Attributes
     long number;
@@ -11,7 +13,7 @@ public class Tester {
 
     Persistence persistencia = new Persistence();
 
-    public Tester() {
+    public CollatzAnalyzer() {
 
         System.out.println("Introduce un número:");
 
