@@ -11,7 +11,7 @@ public class CollatzAnalyzer {
     ArrayList<Long> tail = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
 
-    Persistence persistencia = new Persistence();
+    Persistence persistence = new Persistence();
 
     public CollatzAnalyzer() {
 
@@ -40,19 +40,19 @@ public class CollatzAnalyzer {
 
         if(tail.get(0) == 4 && tail.get(1)==2 && tail.get(2)==1){
             System.out.println("Collatz confirmed");
-            persistencia.collatz(number);
+            persistence.isCollatz(number);
 
         }else if (tail.get(0) == 2 && tail.get(1)==1 && tail.get(2)==4) {
             System.out.println("Collatz confirmed");
-            persistencia.collatz(number);
+            persistence.isCollatz(number);
 
         }else if (tail.get(0) == 1 && tail.get(1)==4 && tail.get(2)==2){
             System.out.println("Collatz confirmed");
-            persistencia.collatz(number);
+            persistence.isCollatz(number);
 
         }else{
             System.out.println("You just made history");
-            persistencia.noCollatz(number);
+            persistence.notCollatz(number);
         }
     }
 }
