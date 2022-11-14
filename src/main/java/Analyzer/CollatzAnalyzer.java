@@ -4,10 +4,13 @@ import java.util.ArrayList;
 public class CollatzAnalyzer {
 
     //Attributes
+
     long number;
     long aux;
     ArrayList<Long> tail = new ArrayList<>();
     Persistence persistence = new Persistence();
+
+    //Constructor and methods
 
     public CollatzAnalyzer() {
 
@@ -57,4 +60,5 @@ public class CollatzAnalyzer {
         }
 
     }
+
 }
