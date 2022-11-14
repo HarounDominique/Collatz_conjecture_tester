@@ -40,19 +40,19 @@ public class CollatzAnalyzer {
 
         if(tail.get(0) == 4 && tail.get(1)==2 && tail.get(2)==1){
             System.out.println("Collatz confirmed");
-            persistence.isCollatz(number);
+            persistence.isCollatz(aux);
 
         }else if (tail.get(0) == 2 && tail.get(1)==1 && tail.get(2)==4) {
             System.out.println("Collatz confirmed");
-            persistence.isCollatz(number);
+            persistence.isCollatz(aux);
 
         }else if (tail.get(0) == 1 && tail.get(1)==4 && tail.get(2)==2){
             System.out.println("Collatz confirmed");
-            persistence.isCollatz(number);
+            persistence.isCollatz(aux);
 
         }else{
             System.out.println("You just made history");
-            persistence.notCollatz(number);
+            persistence.notCollatz(aux);
         }
     }
 }

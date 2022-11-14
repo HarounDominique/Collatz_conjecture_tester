@@ -1,28 +1,26 @@
 package PhysicalPersistence;
 
-import java.io.DataOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class Persistence {
 
-    public void isCollatz(long numberTested){
-        try (FileOutputStream fos = new FileOutputStream("D:\\IntelliJ_Projects\\Collatz\\src\\main\\resources\\Collatz.txt"); DataOutputStream dos = new DataOutputStream(fos)) {
+    public void isCollatz(long testedNumber){
+        try (FileWriter fw = new FileWriter("D:\\IntelliJ_Projects\\Collatz\\src\\main\\resources\\IsCollatz.txt", true)) {
 
-            //dos.writeLong(numberTested);
-            dos.writeChar((int) numberTested);
-            dos.writeByte('\n');
+            fw.write(String.valueOf(testedNumber));
+            fw.write('\n');
+
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void notCollatz(long numberTested){
-        try (FileOutputStream fos = new FileOutputStream("D:\\IntelliJ_Projects\\Collatz\\src\\main\\resources\\NoCollatz.txt"); DataOutputStream dos = new DataOutputStream(fos)) {
+    public void notCollatz(long testedNumber){
+        try (FileWriter fw = new FileWriter("D:\\IntelliJ_Projects\\Collatz\\src\\main\\resources\\NotCollatz.txt")) {
 
-            //dos.writeLong(numberTested);
-            dos.writeChar((int) numberTested);
-            dos.writeByte('\n');
+            fw.write(String.valueOf(testedNumber));
+            fw.write('\n');
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
